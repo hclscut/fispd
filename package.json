@@ -7,7 +7,7 @@
 		"test": "make test"
 	},
 	"bin": {
-		"doxmod": "bin/fispd"
+		"fispd": "bin/fispd"
 	},
 	"keywords": [
 		"disk",
