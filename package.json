@@ -1,0 +1,24 @@
+{
+	"name": "fisp-disk",
+	"version": "0.0.0",
+	"description": "for disk fisp plugin",
+	"main": "index.js",
+	"script": {
+		"test": "make test"
+	},
+	"bin": {
+		"doxmod": "bin/fispd"
+	},
+	"keywords": [
+		"disk",
+		"fisp"
+	],
+	"dependencies": {
+		"commander": "*",
+		"fis-kernel": "*"
+	},
+	"author": {
+		"name": "hclscut"
+	},
+	"homepage": "https://github.com/hclscut"
+}

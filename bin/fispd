@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var program = require('commander'),
+	fispd = require('../fispd.js'),
+	pkg = require('../package');
+
+// options
+ 
+program
+  .version(pkg.version)
+  .option('-d, --addr', 'addr is a address that has a donwload tarball');
+
+
+// examples
+
+program.on('--help', function() {
+	
+	console.log('  Examples:');
+	console.log('');
+	console.log('    # stdin');
+    console.log('    $ fisp install -d http://www.xxx.com/xxx/xxx.tar');
+	console.log('');
+});
+
+// parse argv
+program.parse(process.argv);
+
+// args void of cmd
+var args = process.argv.slice(2);
+
+if(args[0] != 'install'){
+	process.stdout.write(program.helpInformation());
+  	program.emit('--help');
+} else {
+	fispd.run(args[2]);
+}
